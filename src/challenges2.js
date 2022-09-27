@@ -3,14 +3,12 @@ function verificaNumero(array) {
   if (array.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
-
   for (let i = 0; i < array.length; i += 1) {
     let count = 0;
     if (array[i] < 0 || array[i] > 9) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
     let numRepetido = array[i];
-
     for (let j = 0; j < array.length; j += 1) {
       if (numRepetido === array[j]) {
         count += 1;
@@ -20,13 +18,12 @@ function verificaNumero(array) {
       }
     }
   }
-
   return array;
 }
 function criaNumero(array) {
-  let numeroGerado = `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`;
-
-  return numeroGerado;
+  let numeroGerado = `${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`;
+  let ddd = `(${array[0]}${array[1]}) `;
+  return ddd + numeroGerado;
 }
 
 function generatePhoneNumber(array) {
@@ -60,10 +57,10 @@ function hydrate(string) {
     agua += Number(quantidade[i]); // transforma string em numero se possível
   }
 
-  if(agua == 1){
-    return '1 copo de água'
+  if (agua === 1) {
+    return '1 copo de água';
   }
-  return agua + ' copos de água'
+  return `${agua} copos de água`;
 }
 
 module.exports = {

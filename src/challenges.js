@@ -60,7 +60,7 @@ function highestCount(array) {
 function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) { // usei math.abs para retornar o valor absoluto da distancia entre rato e gato, evitando valores negativos
     return 'cat1';
-  } else if (Math.abs(mouse - cat2) < Math.abs(mouse - cat1)) {
+  } if (Math.abs(mouse - cat2) < Math.abs(mouse - cat1)) {
     return 'cat2';
   }
   return 'os gatos trombam e o rato foge';
