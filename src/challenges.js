@@ -116,7 +116,6 @@ function encode(string) {
   return encodedString;
 }
 
-
 function decode(string) {
   let splitString = string.split('');
   let decodedArray = []
@@ -148,8 +147,20 @@ function decode(string) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+
+function techList(array, string) {
+
+  if(array.length == 0){
+    return 'Vazio!'
+  }
+  let arrayOrdenado = array.sort() //método retorna os elementos do array de maneira ordenada
+  let lista = []
+
+  for (let i = 0; i < arrayOrdenado.length; i++) {
+    lista.push({ tech: array[i], name: string })
+
+  }
+  return lista;
 }
 
 module.exports = {
